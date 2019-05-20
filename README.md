@@ -6,14 +6,13 @@ which are in the [cluster](config-root/cluster/) directory and it instantiates a
 spark operator resource using the
 [spark-operator.yaml](config-root/namespaces/spark-operator/spark-operator.yaml)
 which lives in a dedicated namespace,
-[config-root/namespaces/spark-operator](`spark-operator`).
+[spark-operator](config-root/namespaces/spark-operator).
 
-there are examples to show how the acme datascience team might set up jobs under
+there is an example to show how the acme datascience team might set up jobs under
 a [job directory](config-root/namespaces/datascience-team/jobs/) and have RBAC
-configured automatically for respective subdirectories. an example job are there
-based on the
+configured automatically for respective subdirectories. the job there is based on the
 [spark-pi-schedule.yaml](https://github.com/GoogleCloudPlatform/spark-on-k8s-operator/blob/master/examples/spark-pi-schedule.yaml)
-example. this will run a spark job every 5 minutes in the cluster.
+example which runs a spark job every 5 minutes in the cluster.
 
 this config set up works well with
 [kind](https://github.com/kubernetes-sigs/kind) which uses docker not actual VMs
