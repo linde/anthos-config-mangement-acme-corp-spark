@@ -1,12 +1,15 @@
-apiVersion: addons.sigs.k8s.io/v1alpha1
+apiVersion: configmanagement.gke.io/v1
 kind: ConfigManagement
 metadata:
   name: config-management
   namespace: config-management-system
 spec:
-  clusterName: example-cluster-to-sync-crds
+  clusterName: spark-test
+  policyController:
+    enabled: true
   git:
-    syncRepo: git@github.com:linde/nomos-acme-corp.git
     secretType: ssh
+    syncRepo: git@github.com:linde/anthos-config-mangement-acme-corp-spark.git
+    syncBranch: spark-on-kind
     policyDir: config-root
-    syncBranch: nomos-spark-crd
+
