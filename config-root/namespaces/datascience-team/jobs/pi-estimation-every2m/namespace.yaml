@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: pi-estimation-every5m
+  name: pi-estimation-every2m
 
   
   
