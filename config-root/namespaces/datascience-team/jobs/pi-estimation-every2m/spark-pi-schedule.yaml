@@ -19,7 +19,7 @@ kind: ScheduledSparkApplication
 metadata:
   name: spark-pi-scheduled
 spec:
-  schedule: "@every 5m"
+  schedule: "@every 2m"
   concurrencyPolicy: Allow
   template:
     type: Scala
@@ -31,15 +31,15 @@ spec:
     restartPolicy:
       type: Never
     driver:
-      cores: 0.1
-      coreLimit: "200m"
-      memory: "512m"
+      cores: 0.01
+      coreLimit: "20m"
+      memory: "64m"
       labels:
         version: 2.4.0
       serviceAccount: spark
     executor:
       cores: 1
       instances: 1
-      memory: "512m"
+      memory: "64m"
       labels:
         version: 2.4.0 
